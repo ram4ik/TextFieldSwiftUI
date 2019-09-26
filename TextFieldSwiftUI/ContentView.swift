@@ -9,8 +9,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var name = ""
     var body: some View {
-        Text("Hello World")
+        NavigationView {
+            Form {
+//                TextField($name, placeholder: Text("Name"))
+                Text("Hello \(name)")
+            }.navigationBarTitle(Text("Text Field Example"))
+        }
     }
 }
 
